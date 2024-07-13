@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {KeycloakService} from "keycloak-angular";
+import { KeycloakEvent, KeycloakEventType, KeycloakService } from 'keycloak-angular';
 
 @Injectable({
   providedIn: 'root'
@@ -15,6 +15,15 @@ export class MyKeycloakService {
     await this.keycloakService.logout();
   }
   async getUserProfile() {
+	  console.log("register");
+	  this.keycloakService.keycloakEvents$.subscribe({
+  next: async (event) => {
+    if (event.type == KeycloakEventType.OnTokenExpired) {
+	  await  this.keycloakService.logout();
+    	console.log("expired!");
+    }
+  }
+});
     return await this.keycloakService.loadUserProfile()
   }
   async getToken() {

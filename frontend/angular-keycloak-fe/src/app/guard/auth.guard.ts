@@ -18,12 +18,12 @@ export class AuthGuard extends KeycloakAuthGuard {
 
 async isAccessAllowed(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
     if (!this.authenticated) {
-      await this.keycloak.login({
-        redirectUri: window.location.origin + state.url
-      });
+
+      console.log("good bye");
+      this.keycloak.login();
 
     }
-    console.log("Roles: ", this.roles)
+    console.log("Roles:-guard ", this.roles)
     const requiredRoles = route.data["roles"];
     if (!(requiredRoles instanceof Array) || requiredRoles.length === 0) {
       return true;

@@ -11,10 +11,14 @@ const  initializeKeyCloak = (keycloak: KeycloakService) => {
       },
       initOptions: {
       onLoad: 'check-sso',
-      silentCheckSsoRedirectUri: window.location.origin + '/assets/silent-check-sso.html'
+      checkLoginIframe:false,
+      enableLogging:true,
       },
       enableBearerInterceptor: true,
-      bearerExcludedUrls: ['/assets', '/clients/public']
+      bearerExcludedUrls: ['/assets', '/clients/public'],
+ 		shouldUpdateToken(request) {
+    return false;
+  }
     });
 }
 
