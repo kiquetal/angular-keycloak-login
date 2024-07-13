@@ -1,0 +1,9 @@
+.home-card {
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.home-avatar {
+  background-image: url('/path/to/your/avatar/image.png');
+  background-size: cover;
+}

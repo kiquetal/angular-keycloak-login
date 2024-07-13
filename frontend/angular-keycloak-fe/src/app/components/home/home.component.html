@@ -1,2 +1,14 @@
-<p>home works!</p>
-<p>Logged in as: {{ profile  }}</p>
+<mat-card class="home-card">
+  <mat-card-header>
+    <div mat-card-avatar class="home-avatar"></div>
+    <mat-card-title>Welcome Home!</mat-card-title>
+    <mat-card-subtitle>Logged in as: {{ profile?.username}}</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <p>This is your home dashboard. You can find your profile and application information here.</p>
+  </mat-card-content>
+  <mat-card-actions align="end">
+    <button mat-button (click)="openProfileDIalog()">View Profile</button>
+    <button mat-button (click)="logout()">Logout</button>
+  </mat-card-actions>
+</mat-card>
