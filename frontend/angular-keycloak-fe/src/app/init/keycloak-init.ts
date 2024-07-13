@@ -4,13 +4,13 @@ const  initializeKeyCloak = (keycloak: KeycloakService) => {
   return () =>
     keycloak.init({
       config: {
-        url: 'http://localhost:8080/auth',
-        realm: 'demo',
-        clientId: 'angular-keycloak-fe'
+        url: 'http://10.105.200.211',
+        realm: 'phoenix',
+        clientId: 'angular-client'
       },
       initOptions: {
-        onLoad: 'login-required',
-        checkLoginIframe: false
+      onLoad: 'check-sso',
+      silentCheckSsoRedirectUri: window.location.origin + '/assets/silent-check-sso.html'
       },
       enableBearerInterceptor: true,
       bearerExcludedUrls: ['/assets', '/clients/public']

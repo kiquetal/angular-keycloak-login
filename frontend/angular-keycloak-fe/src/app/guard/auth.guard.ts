@@ -23,10 +23,12 @@ async isAccessAllowed(route: ActivatedRouteSnapshot, state: RouterStateSnapshot)
       });
 
     }
+    console.log("Roles: ", this.roles)
     const requiredRoles = route.data["roles"];
     if (!(requiredRoles instanceof Array) || requiredRoles.length === 0) {
       return true;
     }
+
     return requiredRoles.every((role) => this.roles.includes(role));
 
   }
