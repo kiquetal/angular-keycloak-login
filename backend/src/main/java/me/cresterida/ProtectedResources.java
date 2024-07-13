@@ -22,6 +22,10 @@ public class ProtectedResources {
     public String getProtectedResource() {
 
 
-        return "This is a protected resource, welcome " + securityContext.getUserPrincipal().getName() + " with roles :" + jwt.getClaim("resource_access");
+        jwt.getClaimNames().forEach(claim -> {
+            System.out.println(claim + ": " + jwt.getClaim(claim));
+        });
+
+        return "This is a protected resource, welcome " + securityContext.getUserPrincipal().getName() + " with roles :" + jwt.getGroups();
     }
 }
