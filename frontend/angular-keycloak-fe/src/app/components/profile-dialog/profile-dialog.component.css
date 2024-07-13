@@ -1,0 +1,42 @@
+mat-dialog-title {
+  background-color: #1976d2; /* Blue background for the title */
+  color: #fff; /* White text color for the title */
+  font-size: 24px; /* Larger font size for the title */
+    text-align: center !important;
+ }
+
+/* Style for the dialog content */
+mat-dialog-content {
+  color: #333; /* Dark grey color for text */
+  font-size: 16px; /* Standard font size for content */
+}
+
+/* Style for the strong tag to highlight key words */
+strong {
+  color: #0d47a1; /* Darker blue for emphasis */
+}
+
+/* Style for the horizontal rule to separate sections */
+hr {
+  border-top: 1px solid #bbb; /* Light grey color for the horizontal rule */
+}
+
+/* Style for the token container for better visibility */
+div {
+  background-color: #e3f2fd; /* Light blue background for the token */
+  padding: 8px; /* Padding around the token text */
+  border-radius: 4px; /* Rounded corners for the token container */
+  margin-top: 8px; /* Margin above the token container */
+  word-break: break-all; /* Ensure long tokens wrap */
+}
+
+/* Style for the dialog actions to align them properly */
+mat-dialog-actions {
+  justify-content: flex-end; /* Align buttons to the right */
+}
+
+/* Style for buttons within the dialog */
+button {
+  color: #1976d2; /* Blue color for button text */
+  margin-left: 8px; /* Space between buttons */
+}

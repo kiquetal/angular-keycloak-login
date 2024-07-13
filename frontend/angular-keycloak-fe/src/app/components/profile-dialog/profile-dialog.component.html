@@ -1,0 +1,11 @@
+<h2 mat-dialog-title>Token Information</h2>
+<mat-dialog-content>
+  <p><strong>User profile:</strong> {{data.profile | json}}</p>
+  <hr/>
+  <p><strong>Token: </strong></p>
+  <div>{{data.token}}</div>
+  <!-- Add more profile details here -->
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close (click)="closeDialog()">Close</button>
+</mat-dialog-actions>
