@@ -13,6 +13,7 @@ import {MatSidenav} from "@angular/material/sidenav";
 export class AppComponent {
   title = 'angular-keycloak-fe';
   constructor() {
+    console.log(environment.production)
   console.log(environment.keycloak.url)
   }
 }
