@@ -2,7 +2,7 @@ const fs = require('fs');
 const dotenv = require('dotenv');
 
 dotenv.config();
-let targetPath = './src/environments/environment.ts';
+let targetPath = './src/environments/environment.prod.ts';
 
 const envConfigPath = fs.readFileSync(targetPath, 'utf8');
 

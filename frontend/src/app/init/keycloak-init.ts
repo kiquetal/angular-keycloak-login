@@ -13,6 +13,8 @@ const  initializeKeyCloak = (keycloak: KeycloakService) => {
       onLoad: 'check-sso',
       checkLoginIframe:false,
       enableLogging:true,
+      silentCheckSsoRedirectUri:     window.location.origin + '/assets/silent-check-sso.html',
+
       },
       enableBearerInterceptor: true,
       bearerExcludedUrls: ['/assets', '/clients/public'],

@@ -1,9 +1,10 @@
 export const environment = {
-  apiUrl: "http://prod:8080",
+  apiUrl: "http://localhost:8080",
   production: true,
   keycloak: {
-    url: "url: 'http://localhost:8080/environment_variable'",
-    realm: "REALM_HOLDER",
-    clientId: "CLIENT_ID"
+    url: "http://10.105.200.211",
+    realm: "phoenix",
+    clientId: "angular-client"
   }
 };
+
