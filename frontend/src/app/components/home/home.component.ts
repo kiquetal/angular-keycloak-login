@@ -51,7 +51,8 @@ export class HomeComponent implements OnInit{
      this.dialog.open(ProfileDialogComponent, {
        data: {
           profile: this.profile,
-          token: this.token
+          token: this.token,
+          refreshToken: this.keycloakService.getRefreshToken()
        }
      });
   }

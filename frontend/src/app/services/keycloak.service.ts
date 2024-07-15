@@ -29,4 +29,8 @@ export class MyKeycloakService {
   async getToken() {
     return await this.keycloakService.getToken()
   }
+   getRefreshToken(): string {
+    const instance = this.keycloakService.getKeycloakInstance();
+    return <string>instance.refreshToken;
+  }
 }
