@@ -9,7 +9,6 @@ import jakarta.ws.rs.core.SecurityContext;
 import org.eclipse.microprofile.jwt.JsonWebToken;
 
 @Path("/protected")
-@Authenticated
 public class ProtectedResources {
 
     @Inject
