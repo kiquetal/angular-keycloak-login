@@ -14,7 +14,7 @@ export const appConfig: ApplicationConfig = {
     provideAnimationsAsync(),
     {
      provide: KeycloakService,
-      useClass: KeycloakService
+     useClass: KeycloakService
     },
     {
     provide: APP_INITIALIZER,
