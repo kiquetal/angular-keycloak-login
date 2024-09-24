@@ -10,6 +10,7 @@ import {
 } from "@angular/material/card";
 import {MatDialog} from "@angular/material/dialog";
 import {ProfileDialogComponent} from "../profile-dialog/profile-dialog.component";
+import {MatButton} from "@angular/material/button";
 
 @Component({
   selector: 'app-home',
@@ -21,6 +22,7 @@ import {ProfileDialogComponent} from "../profile-dialog/profile-dialog.component
     MatCardActions,
     MatCardSubtitle,
     MatCardTitle,
+    MatButton,
 
   ],
   templateUrl: './home.component.html',
